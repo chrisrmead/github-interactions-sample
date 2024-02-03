@@ -9,11 +9,14 @@ This was created with:
 git clone git@github.com:chrisrmead/github-interactions-sample.git
 npm install
 npx playwright install 
-```npx playwright test```
+```
 
 ## Run Tests
 ### Headless
-```npx playwright test --ui```
-The click the arrow next to the test name
+
+```npx playwright test```
 
 ### Interactive Debugging
+```npx playwright test --ui```
+
+Then click the arrow next to the test name
