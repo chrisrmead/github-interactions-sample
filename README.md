@@ -1,5 +1,9 @@
 # github-interactions-sample
 
+## Overview
+* Uses github search API on a keyword to return results
+* Opens playwright with first search result HTML url and asserts that page loads
+
 ## Creation
 This was created with:
 ```npm install -D @playwright/test@latest```
