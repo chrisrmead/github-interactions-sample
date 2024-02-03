@@ -16,6 +16,7 @@ npx playwright install
 ```
 
 ## Run Tests
+Chrome & Firefox tests run in parallel.
 ### Headless
 
 ```
