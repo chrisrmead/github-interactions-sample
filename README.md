@@ -18,9 +18,13 @@ npx playwright install
 ## Run Tests
 ### Headless
 
-```npx playwright test```
+```
+npx playwright test
+npx playwright show-report
+```
 
 ### Interactive Debugging
 ```npx playwright test --ui```
 
-Then click the arrow next to the test name
+Then click the arrow next to the test name to run the test in interactive mode.
+
