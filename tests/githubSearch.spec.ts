@@ -24,6 +24,6 @@ test('github search via API', async ({ page }) => {
   const pageSubtitle = headerContainer.locator('[data-pjax="#repo-content-pjax-container"]').first();
   const subtitleText = await pageSubtitle.innerText();
 
-  expect(subtitleText).toEqual('create-react-app2')
+  expect(subtitleText).toEqual('create-react-app')
 
 });
