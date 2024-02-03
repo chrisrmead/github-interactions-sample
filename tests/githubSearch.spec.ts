@@ -8,22 +8,28 @@ test('github search via API', async ({ page }) => {
 
   const firstResult = searchResult.items[0];
 
-  expect(firstResult.description).toEqual('Set up a modern web app by running one command.')
+  expect(firstResult.description).toEqual('Set up a modern web app by running one command.');
 
   const firtResultLicense = firstResult.license;
 
-  expect(firtResultLicense.key).toEqual('mit');
-  expect(firtResultLicense.name).toEqual('MIT License');
-  expect(firtResultLicense.node_id).toEqual('MDc6TGljZW5zZTEz');
-  expect(firtResultLicense.spdx_id).toEqual('MIT');
-  expect(firtResultLicense.url).toEqual('https://api.github.com/licenses/mit');
+  const expectedLicense = {
+    key: 'mit',
+    name: 'MIT License',
+    node_id: 'MDc6TGljZW5zZTEz',
+    spdx_id: 'MIT',
+    url: 'https://api.github.com/licenses/mit'
+  }
+
+  expect(firtResultLicense).toEqual(expectedLicense);
 
   await page.goto(firstResult.html_url);
 
-  const headerContainer = page.locator('#repository-container-header')
+  const headerContainer = page.locator('#repository-container-header');
   const pageSubtitle = headerContainer.locator('[data-pjax="#repo-content-pjax-container"]').first();
   const subtitleText = await pageSubtitle.innerText();
 
-  expect(subtitleText).toEqual('create-react-app')
+  expect(subtitleText).toEqual('create-react-app');
+
+  page.close();
 
 });
