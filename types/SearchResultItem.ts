@@ -1,4 +1,7 @@
-type SearchResultItem = {
+import { Owner } from './Owner'
+import { License } from './License';
+
+export type SearchResultItem = {
     id: number
     node_id: string
     name: string

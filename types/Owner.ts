@@ -1,4 +1,4 @@
-type Owner = {
+export type Owner = {
     login: string
     id: number
     node_id: string

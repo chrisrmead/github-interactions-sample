@@ -1,5 +1,6 @@
 import { test, expect } from '@playwright/test';
 import { getRepositorySearchResult } from '../githubAPI/api';
+import { SearchResult } from '../types/SearchResult'
 
 
 test('github search via API', async ({ page }) => {

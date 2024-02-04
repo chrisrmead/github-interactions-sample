@@ -1,4 +1,4 @@
-type License = {
+export type License = {
     key: string
     name: string
     spdx_id: string
