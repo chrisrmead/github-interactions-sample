@@ -16,7 +16,7 @@ npx playwright install
 ```
 
 ## Run Tests
-Chrome & Firefox tests run in parallel.
+Chrome, Firefox, & Webkit tests run in parallel.
 ### Headless
 
 ```
@@ -28,4 +28,7 @@ npx playwright show-report
 ```npx playwright test --ui```
 
 Then click the arrow next to the test name to run the test in interactive mode.
+
+### Version Notes
+If your webkit run fails, you are probably on an older version of OS X.  Update to version 14.2.1 or later
 
