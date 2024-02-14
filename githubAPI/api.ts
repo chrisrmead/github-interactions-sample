@@ -1,3 +1,4 @@
+import { SearchResult } from "../types/SearchResult"
 
 const githubAPI = 'https://api.github.com'
 
